@@ -1,4 +1,4 @@
-package v1beta3
+package v1beta1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -10,5 +10,5 @@ import (
 type DynamicArgs struct {
 	metav1.TypeMeta `json:",inline"`
 	// PolicyConfigPath specified the path of policy config.
-	PolicyConfigPath *string `json:"policyConfigPath,omitempty"`
+	PolicyConfigPath string `json:"policyConfigPath"`
 }
